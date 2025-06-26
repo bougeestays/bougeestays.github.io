@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Home, Award, Star, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -80,17 +81,17 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-luxury-cream">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative luxury-gradient text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative airbnb-gradient text-white">
+        <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative container-custom section-padding py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 leading-tight">
               Luxury Stays
-              <span className="block text-luxury-gold">Redefined</span>
+              <span className="block text-white">Redefined</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
               We transform premium properties into extraordinary Airbnb experiences. 
@@ -100,7 +101,7 @@ const Index = () => {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-navy font-semibold px-8 py-4 text-lg"
+                className="bg-white hover:bg-white/90 text-airbnb-primary font-semibold px-8 py-4 text-lg"
               >
                 <Link to="/properties">
                   Explore Properties
@@ -111,7 +112,7 @@ const Index = () => {
                 asChild 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-luxury-navy font-semibold px-8 py-4 text-lg"
+                className="border-white text-white hover:bg-white hover:text-airbnb-primary font-semibold px-8 py-4 text-lg"
               >
                 <Link to="/about">Learn More</Link>
               </Button>
@@ -126,10 +127,10 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-2">
+                <div className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-2">
                   {stat.number}
                 </div>
-                <div className="text-luxury-stone font-medium">
+                <div className="text-airbnb-gray-light font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -139,13 +140,13 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-luxury-stone-light">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-6">
               Why Choose Luxury Stays
             </h2>
-            <p className="text-xl text-luxury-stone max-w-3xl mx-auto">
+            <p className="text-xl text-airbnb-gray-light max-w-3xl mx-auto">
               We go beyond typical vacation rentals to create extraordinary experiences 
               that exceed your expectations at every turn.
             </p>
@@ -158,11 +159,11 @@ const Index = () => {
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <feature.icon className="w-12 h-12 text-luxury-gold mx-auto mb-6" />
-                <h3 className="text-2xl font-playfair font-semibold text-luxury-navy mb-4">
+                <feature.icon className="w-12 h-12 text-airbnb-primary mx-auto mb-6" />
+                <h3 className="text-2xl font-playfair font-semibold text-airbnb-gray mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-luxury-stone leading-relaxed">
+                <p className="text-airbnb-gray-light leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -175,10 +176,10 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-6">
               Featured Properties
             </h2>
-            <p className="text-xl text-luxury-stone max-w-3xl mx-auto">
+            <p className="text-xl text-airbnb-gray-light max-w-3xl mx-auto">
               Discover our hand-picked selection of premium properties, 
               each offering a unique luxury experience.
             </p>
@@ -194,7 +195,7 @@ const Index = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-luxury-navy hover:bg-luxury-navy/90 text-white font-semibold px-8"
+              className="bg-airbnb-primary hover:bg-airbnb-primary-dark text-white font-semibold px-8"
             >
               <Link to="/properties">
                 View All Properties
@@ -206,13 +207,13 @@ const Index = () => {
       </section>
 
       {/* All Listings Section */}
-      <section className="py-20 bg-luxury-stone-light">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-6">
               Browse All Our Listings
             </h2>
-            <p className="text-xl text-luxury-stone max-w-3xl mx-auto">
+            <p className="text-xl text-airbnb-gray-light max-w-3xl mx-auto">
               Explore our complete collection of premium properties across different portfolios. 
               Each collection offers unique experiences tailored to different travel needs.
             </p>
@@ -225,10 +226,10 @@ const Index = () => {
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
               >
                 <div className="mb-6">
-                  <h3 className="text-2xl font-playfair font-semibold text-luxury-navy mb-4">
+                  <h3 className="text-2xl font-playfair font-semibold text-airbnb-gray mb-4">
                     {profile.name}
                   </h3>
-                  <p className="text-luxury-stone leading-relaxed mb-6">
+                  <p className="text-airbnb-gray-light leading-relaxed mb-6">
                     {profile.description}
                   </p>
                 </div>
@@ -236,7 +237,7 @@ const Index = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="bg-luxury-navy hover:bg-luxury-navy/90 text-white font-semibold px-8 w-full"
+                  className="bg-airbnb-primary hover:bg-airbnb-primary-dark text-white font-semibold px-8 w-full"
                 >
                   <a 
                     href={profile.profileUrl} 
@@ -253,14 +254,14 @@ const Index = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-luxury-stone mb-6">
+            <p className="text-airbnb-gray-light mb-6">
               Can't find what you're looking for? Our team is here to help you discover the perfect property.
             </p>
             <Button 
               asChild 
               size="lg" 
               variant="outline"
-              className="border-luxury-navy text-luxury-navy hover:bg-luxury-navy hover:text-white font-semibold px-8"
+              className="border-airbnb-primary text-airbnb-primary hover:bg-airbnb-primary hover:text-white font-semibold px-8"
             >
               <Link to="/contact">Contact Us for More Options</Link>
             </Button>
@@ -269,7 +270,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 luxury-gradient text-white">
+      <section className="py-20 airbnb-gradient text-white">
         <div className="container-custom section-padding text-center">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
             Ready to Experience Luxury?
@@ -282,7 +283,7 @@ const Index = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-navy font-semibold px-8"
+              className="bg-white hover:bg-white/90 text-airbnb-primary font-semibold px-8"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -290,7 +291,7 @@ const Index = () => {
               asChild 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-luxury-navy font-semibold px-8"
+              className="border-white text-white hover:bg-white hover:text-airbnb-primary font-semibold px-8"
             >
               <Link to="/properties">Browse Properties</Link>
             </Button>
@@ -299,23 +300,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-luxury-navy text-white py-12">
+      <footer className="bg-airbnb-gray text-white py-12">
         <div className="container-custom section-padding">
           <div className="text-center">
-            <div className="text-3xl font-playfair font-bold text-luxury-gold mb-4">
+            <div className="text-3xl font-playfair font-bold text-airbnb-primary mb-4">
               Luxury Stays
             </div>
             <p className="text-white/80 mb-6 max-w-md mx-auto">
               Transforming premium properties into extraordinary experiences.
             </p>
             <div className="flex justify-center space-x-6">
-              <Link to="/about" className="text-white/80 hover:text-luxury-gold transition-colors">
+              <Link to="/about" className="text-white/80 hover:text-airbnb-primary transition-colors">
                 About
               </Link>
-              <Link to="/properties" className="text-white/80 hover:text-luxury-gold transition-colors">
+              <Link to="/properties" className="text-white/80 hover:text-airbnb-primary transition-colors">
                 Properties
               </Link>
-              <Link to="/contact" className="text-white/80 hover:text-luxury-gold transition-colors">
+              <Link to="/contact" className="text-white/80 hover:text-airbnb-primary transition-colors">
                 Contact
               </Link>
             </div>

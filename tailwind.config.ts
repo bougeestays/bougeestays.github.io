@@ -67,13 +67,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				luxury: {
-					navy: '#1a2332',
-					gold: '#d4af37',
-					'gold-light': '#f4e4a6',
-					cream: '#faf8f3',
-					stone: '#8b8680',
-					'stone-light': '#f5f4f2'
+				airbnb: {
+					primary: '#FF385C',
+					'primary-dark': '#E31C5F',
+					gray: '#222222',
+					'gray-light': '#717171',
+					'gray-border': '#DDDDDD',
+					'background': '#FFFFFF'
 				}
 			},
 			borderRadius: {
