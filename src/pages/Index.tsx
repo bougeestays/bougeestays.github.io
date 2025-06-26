@@ -1,6 +1,5 @@
-
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Home, Award, Star } from 'lucide-react';
+import { ArrowRight, Shield, Home, Award, Star, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import PropertyCard from '@/components/PropertyCard';
@@ -62,6 +61,21 @@ const Index = () => {
       icon: Award,
       title: 'Exceptional Service',
       description: '24/7 concierge support for an unforgettable experience'
+    }
+  ];
+
+  const airbnbProfiles = [
+    {
+      id: 1,
+      name: 'Premium Collection',
+      profileUrl: 'https://www.airbnb.co.in/users/show/515211548',
+      description: 'Our flagship properties featuring luxury amenities and prime locations'
+    },
+    {
+      id: 2,
+      name: 'Executive Suites',
+      profileUrl: 'https://www.airbnb.co.in/users/show/586204498', 
+      description: 'Business-friendly accommodations perfect for extended stays'
     }
   ];
 
@@ -186,6 +200,69 @@ const Index = () => {
                 View All Properties
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* All Listings Section */}
+      <section className="py-20 bg-luxury-stone-light">
+        <div className="container-custom section-padding">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
+              Browse All Our Listings
+            </h2>
+            <p className="text-xl text-luxury-stone max-w-3xl mx-auto">
+              Explore our complete collection of premium properties across different portfolios. 
+              Each collection offers unique experiences tailored to different travel needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {airbnbProfiles.map((profile) => (
+              <div 
+                key={profile.id}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-playfair font-semibold text-luxury-navy mb-4">
+                    {profile.name}
+                  </h3>
+                  <p className="text-luxury-stone leading-relaxed mb-6">
+                    {profile.description}
+                  </p>
+                </div>
+                
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-luxury-navy hover:bg-luxury-navy/90 text-white font-semibold px-8 w-full"
+                >
+                  <a 
+                    href={profile.profileUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    View All Listings
+                    <ExternalLink className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-luxury-stone mb-6">
+              Can't find what you're looking for? Our team is here to help you discover the perfect property.
+            </p>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline"
+              className="border-luxury-navy text-luxury-navy hover:bg-luxury-navy hover:text-white font-semibold px-8"
+            >
+              <Link to="/contact">Contact Us for More Options</Link>
             </Button>
           </div>
         </div>
