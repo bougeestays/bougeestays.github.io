@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,33 +7,33 @@ const FeaturedPropertiesSection = () => {
   const featuredProperties = [
     {
       id: 1,
-      title: 'Elegant Downtown Penthouse',
-      location: 'Manhattan, New York',
-      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop',
-      price: '$450',
-      guests: 6,
-      rating: 4.9,
-      reviews: 127
+      title: 'Bougee Studio Retreat',
+      location: 'Gurgaon, India',
+      image: '/images/576ba456-db39-492a-a853-8b8b31df57b7.jpeg',
+      price: '$xxx',
+      guests: 2,
+      rating: 4.5,
+      reviews: 'xx'
     },
     {
       id: 2,
-      title: 'Luxury Beachfront Villa',
-      location: 'Malibu, California',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop',
-      price: '$650',
-      guests: 8,
-      rating: 4.8,
-      reviews: 89
+      title: 'Urban Luxe Suite',
+      location: 'Gurgaon, India',
+      image: '/images/9dd37433-99c2-4be3-93f2-5d51db521ab9.jpeg',
+      price: '$xxx',
+      guests: 3,
+      rating: 4.5,
+      reviews: 'xx'
     },
     {
       id: 3,
-      title: 'Modern City Loft',
-      location: 'SoHo, New York',
-      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop',
-      price: '$320',
-      guests: 4,
-      rating: 4.7,
-      reviews: 156
+      title: 'Elegant City Apartment',
+      location: 'Gurgaon, India',
+      image: '/images/40beb8bf-b303-44f7-9e0e-a66fb3f233e0.jpeg',
+      price: '$xxx',
+      guests: 2,
+      rating: 4.5,
+      reviews: 'xx'
     }
   ];
 

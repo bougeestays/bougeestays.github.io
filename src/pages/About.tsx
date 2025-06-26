@@ -1,4 +1,3 @@
-
 import { Shield, Award, Heart, Users, CheckCircle } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
@@ -34,48 +33,42 @@ const About = () => {
     'Over 10,000 successful bookings',
     'Partnerships with premium property owners',
     '24/7 concierge support',
-    'Presence in 15+ major cities'
+    'Presence in major cities'
   ];
 
   const team = [
     {
-      name: 'Sarah Johnson',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face',
-      description: 'Former luxury hotel executive with 15+ years of hospitality experience'
+      name: 'Col. Bhupendra (Retd.)',
+      role: 'Co-Host & Curator',
+      image: '/images/576ba456-db39-492a-a853-8b8b31df57b7.jpeg',
+      description: `I am a retired Army officer who has spent a lifetime serving in the forces. After a life well lived, I have decided to embark on a new adventure alongside my daughter. Together, we have poured our hearts into curating & designing each space to perfectly suit the needs of our guests.\n\nOur commitment to excellence, attention to detail, and passion for hospitality ensure that every stay is a unique experience. We host all! Live. Laugh. Love ❤️` 
     },
     {
-      name: 'Michael Chen',
-      role: 'Head of Operations',
-      image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=400&fit=crop&crop=face',
-      description: 'Property management specialist focused on operational excellence'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Guest Experience Director',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop&crop=face',
-      description: 'Dedicated to creating memorable experiences for every guest'
+      name: 'Sweta Kharayat',
+      role: 'Co-Host & Airbnb Marketer',
+      image: '/images/9dd37433-99c2-4be3-93f2-5d51db521ab9.jpeg',
+      description: `I am an avid reader, who spends her time trying to market and run Airbnb. I spend too much time reading and daydreaming, and I'm obsessed with books and the esoteric.\n\nThis journey is a father-daughter duo adventure, blending my marketing skills with my father's wisdom and hospitality.`
     }
   ];
 
   return (
-    <div className="min-h-screen bg-luxury-cream">
+    <div className="min-h-screen bg-[#FF385C]">
       <Navigation />
-
-      {/* Hero Section */}
-      <section className="luxury-gradient text-white py-20">
+      <section className="bg-[#FF385C] text-white py-20">
         <div className="container-custom section-padding">
           <div className="text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6">
-              About Luxury Stays
+              About BOUGEE STAYS
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              We're passionate about transforming exceptional properties into 
-              unforgettable luxury experiences for discerning travelers worldwide.
+            <p className="text-xl text-white/90 max-w-3xl mx-auto whitespace-pre-line">
+              Welcome to Bougee Stays! We are a father-daughter duo passionate about creating memorable stays for our guests. Our journey began with a shared dream: to blend the wisdom and discipline of a life in the Army with the creativity and warmth of modern hospitality.\n\nEvery property is curated with love, care, and a personal touch, ensuring you feel at home—no matter where you are.
             </p>
           </div>
         </div>
       </section>
+
+      {/* Hero Section */}
+     
 
       {/* Story Section */}
       <section className="py-20 bg-white">
@@ -87,27 +80,20 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-luxury-stone leading-relaxed">
                 <p>
-                  Founded in 2020, Luxury Stays began with a simple vision: to bridge the gap 
-                  between luxury hospitality and vacation rentals. Our founder, a former luxury 
-                  hotel executive, recognized the untapped potential in premium residential properties.
+                  Bhupendra, a retired Army officer born in the 70s and a lifelong dog lover, brings a spirit of discipline, reliability, and care to every guest experience. After decades of service, he now finds joy in hosting, always available on text and ready to help.
                 </p>
                 <p>
-                  We saw an opportunity to transform exceptional homes and apartments into 
-                  professionally managed luxury accommodations that rival the world's finest hotels. 
-                  Our approach combines the intimacy of a private residence with the service 
-                  standards of five-star hospitality.
+                  Sweta, born in the 90s, is an Airbnb marketer, avid reader, and dreamer. She's obsessed with books, the esoteric, and her cute little puppy. Together, they combine tradition and innovation to create spaces that are both welcoming and unique.
                 </p>
                 <p>
-                  Today, we're proud to offer a curated portfolio of premium properties in the 
-                  world's most desirable destinations, each delivering an unparalleled level of 
-                  comfort, style, and service.
+                  Bougee Stays is more than just a collection of properties—it's a heartfelt project by a father and daughter who believe in living, laughing, and loving. We invite you to be part of our story!
                 </p>
               </div>
             </div>
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <img
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=600&fit=crop"
-                alt="Luxury interior"
+                src="/images/40beb8bf-b303-44f7-9e0e-a66fb3f233e0.jpeg"
+                alt="Father and daughter smiling together, Bougee Stays founders"
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
               />
             </div>
@@ -115,8 +101,9 @@ const About = () => {
         </div>
       </section>
 
+
       {/* Values Section */}
-      <section className="py-20 bg-luxury-stone-light">
+      <section className="py-20 bg-[#FF385C] bg-opacity-10">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
@@ -154,8 +141,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up">
               <img
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop"
-                alt="Luxury property exterior"
+                src="/images/576ba456-db39-492a-a853-8b8b31df57b7.jpeg"
+                alt="Col. Bhupendra, Bougee Stays Co-Host & Curator"
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
               />
             </div>
@@ -181,19 +168,17 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-luxury-stone-light">
+      <section className="py-20 bg-[#FF385C] bg-opacity-10">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
-              Meet Our Team
+              Meet Your Hosts
             </h2>
             <p className="text-xl text-luxury-stone max-w-3xl mx-auto">
-              Our experienced team brings together expertise from luxury hospitality, 
-              property management, and guest services.
+              Bougee Stays is run by a father-daughter team who pour their hearts into every detail, ensuring your stay is special.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {team.map((member, index) => (
               <div 
                 key={index} 
@@ -202,7 +187,7 @@ const About = () => {
               >
                 <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`Portrait of ${member.name}, ${member.role}`}
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
@@ -212,7 +197,7 @@ const About = () => {
                   <p className="text-luxury-gold font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-luxury-stone">
+                  <p className="text-luxury-stone whitespace-pre-line">
                     {member.description}
                   </p>
                 </div>
@@ -223,19 +208,20 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 luxury-gradient text-white">
+      <section className="py-20 bg-[#FF385C] text-white">
         <div className="container-custom section-padding text-center">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
             Ready to Experience Luxury?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Discover why thousands of guests choose Luxury Stays for their most 
+            Discover why thousands of guests choose Bougee Stays for their most 
             important trips and special occasions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               asChild 
               size="lg" 
+              variant="link"
               className="bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-navy font-semibold px-8"
             >
               <Link to="/properties">View Properties</Link>
@@ -243,8 +229,8 @@ const About = () => {
             <Button 
               asChild 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-luxury-navy font-semibold px-8"
+              variant="default" 
+              className="border-white text-white hover:bg-red hover:text-luxury-navy font-semibold px-8"
             >
               <Link to="/contact">Get in Touch</Link>
             </Button>
@@ -253,17 +239,17 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-luxury-navy text-white py-12">
+      <footer className="bg-[#FF385C] text-white py-12">
         <div className="container-custom section-padding">
           <div className="text-center">
             <div className="text-3xl font-playfair font-bold text-luxury-gold mb-4">
-              Luxury Stays
+              BOUGEE STAYS
             </div>
             <p className="text-white/80 mb-6 max-w-md mx-auto">
-              Transforming premium properties into extraordinary experiences.
+              A father-daughter duo transforming stays into memories.
             </p>
             <div className="mt-8 pt-8 border-t border-white/20 text-white/60">
-              <p>&copy; 2024 Luxury Stays. All rights reserved.</p>
+              <p>&copy; 2025 Bougee Stays. All rights reserved.</p>
             </div>
           </div>
         </div>

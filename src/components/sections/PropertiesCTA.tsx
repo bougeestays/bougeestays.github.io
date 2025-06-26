@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 
 const PropertiesCTA = () => {
@@ -15,9 +14,9 @@ const PropertiesCTA = () => {
         <Button 
           asChild 
           size="lg" 
-          className="bg-white hover:bg-white/90 text-airbnb-primary font-semibold px-8"
+          className="bg-gray-300 hover:bg-gray-400 text-gray-900 font-semibold px-8"
         >
-          <a href="/contact">Contact Us</a>
+          <a href="/contact">Contact Us for More Information</a>
         </Button>
       </div>
     </section>

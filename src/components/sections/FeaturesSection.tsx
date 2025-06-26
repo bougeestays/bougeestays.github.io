@@ -25,7 +25,7 @@ const FeaturesSection = () => {
       <div className="container-custom section-padding">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-6">
-            Why Choose Luxury Stays
+            Why Choose BOUGEE Stays
           </h2>
           <p className="text-xl text-airbnb-gray-light max-w-3xl mx-auto">
             We go beyond typical vacation rentals to create extraordinary experiences 

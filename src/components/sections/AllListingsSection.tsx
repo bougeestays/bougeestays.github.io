@@ -73,7 +73,6 @@ const AllListingsSection = () => {
           <Button 
             asChild 
             size="lg" 
-            variant="outline"
             className="border-airbnb-primary text-airbnb-primary hover:bg-airbnb-primary hover:text-white font-semibold px-8"
           >
             <Link to="/contact">Contact Us for More Options</Link>

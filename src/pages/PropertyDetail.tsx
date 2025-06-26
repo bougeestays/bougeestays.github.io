@@ -31,7 +31,7 @@ const PropertyDetail = () => {
       { icon: Car, name: 'Parking Available' },
       { icon: Coffee, name: 'Premium Coffee' },
       { icon: Tv, name: '4K Smart TV' },
-      { icon: Bath, name: 'Luxury Bathrooms' },
+      { icon: Bath, name: 'BOUGEE Bathrooms' },
       { icon: Bed, name: 'Premium Bedding' }
     ],
     airbnbUrl: 'https://airbnb.com/rooms/example'
@@ -210,13 +210,13 @@ const PropertyDetail = () => {
         <div className="container-custom section-padding">
           <div className="text-center">
             <div className="text-3xl font-playfair font-bold text-luxury-gold mb-4">
-              Luxury Stays
+              BOUGEE Stays
             </div>
             <p className="text-white/80 mb-6 max-w-md mx-auto">
               Transforming premium properties into extraordinary experiences.
             </p>
             <div className="mt-8 pt-8 border-t border-white/20 text-white/60">
-              <p>&copy; 2024 Luxury Stays. All rights reserved.</p>
+              <p>&copy; 2025 BOUGEE Stays. All rights reserved.</p>
             </div>
           </div>
         </div>

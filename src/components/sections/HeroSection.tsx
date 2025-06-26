@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="relative container-custom section-padding py-32">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 leading-tight">
-            Luxury Stays
+            BOUGEE Stays
             <span className="block text-white">Redefined</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
@@ -21,6 +21,7 @@ const HeroSection = () => {
             <Button 
               asChild 
               size="lg" 
+              
               className="bg-white hover:bg-white/90 text-airbnb-primary font-semibold px-8 py-4 text-lg"
             >
               <Link to="/properties">
@@ -31,9 +32,8 @@ const HeroSection = () => {
             <Button 
               asChild 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-airbnb-primary font-semibold px-8 py-4 text-lg"
-            >
+              className="bg-white hover:bg-white/90 text-airbnb-primary font-semibold px-8 py-4 text-lg"
+>
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
