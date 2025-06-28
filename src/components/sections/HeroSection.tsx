@@ -98,7 +98,7 @@ const HeroSection = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold mb-6 leading-tight"
           >
             <span className="block text-white">BOUGEE</span>
-            <span className="block text-gradient">Stays</span>
+            <span className="block text-white">Stays</span>
           </motion.h1>
 
           <motion.p 
