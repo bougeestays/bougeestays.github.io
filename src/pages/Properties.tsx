@@ -101,6 +101,7 @@ const Properties = () => {
                 title="Elements One Mall Map"
               ></iframe>
             </div>
+            
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,13 +19,13 @@ const AllListingsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F7F7F7]">
       <div className="container-custom section-padding">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-airbnb-gray mb-6">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-[#222222] mb-6">
             Browse All Our Listings
           </h2>
-          <p className="text-xl text-airbnb-gray-light max-w-3xl mx-auto">
+          <p className="text-xl text-[#B0B0B0] max-w-3xl mx-auto">
             Explore our complete collection of premium properties across different portfolios. 
             Each collection offers unique experiences tailored to different travel needs.
           </p>
@@ -39,10 +38,10 @@ const AllListingsSection = () => {
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center"
             >
               <div className="mb-6">
-                <h3 className="text-2xl font-playfair font-semibold text-airbnb-gray mb-4">
+                <h3 className="text-2xl font-playfair font-semibold text-[#222222] mb-4">
                   {profile.name}
                 </h3>
-                <p className="text-airbnb-gray-light leading-relaxed mb-6">
+                <p className="text-[#B0B0B0] leading-relaxed mb-6">
                   {profile.description}
                 </p>
               </div>
@@ -50,7 +49,7 @@ const AllListingsSection = () => {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-airbnb-primary hover:bg-airbnb-primary-dark text-white font-semibold px-8 w-full"
+                className="bg-[#FF385C] hover:bg-[#E31C5F] text-white font-semibold px-8 w-full"
               >
                 <a 
                   href={profile.profileUrl} 
@@ -67,13 +66,13 @@ const AllListingsSection = () => {
         </div>
 
         <div className="text-center">
-          <p className="text-airbnb-gray-light mb-6">
+          <p className="text-[#B0B0B0] mb-6">
             Can't find what you're looking for? Our team is here to help you discover the perfect property.
           </p>
           <Button 
             asChild 
             size="lg" 
-            className="border-airbnb-primary text-airbnb-primary hover:bg-airbnb-primary hover:text-white font-semibold px-8"
+            className="border-[#FF385C] text-[#FF385C] hover:bg-[#FF385C] hover:text-white font-semibold px-8"
           >
             <Link to="/contact">Contact Us for More Options</Link>
           </Button>

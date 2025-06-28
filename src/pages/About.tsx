@@ -15,7 +15,7 @@ const About = () => {
       title: 'Excellence',
       description: 'We strive for perfection in every aspect of your stay experience'
     },
-    {
+    { 
       icon: Heart,
       title: 'Hospitality',
       description: 'Genuine care and attention to detail in everything we do'
@@ -40,19 +40,19 @@ const About = () => {
     {
       name: 'Col. Bhupendra (Retd.)',
       role: 'Co-Host & Curator',
-      image: '/images/576ba456-db39-492a-a853-8b8b31df57b7.jpeg',
-      description: `I am a retired Army officer who has spent a lifetime serving in the forces. After a life well lived, I have decided to embark on a new adventure alongside my daughter. Together, we have poured our hearts into curating & designing each space to perfectly suit the needs of our guests.\n\nOur commitment to excellence, attention to detail, and passion for hospitality ensure that every stay is a unique experience. We host all! Live. Laugh. Love ❤️` 
+      image: '/images/host.jpeg',
+      description: `I am a retired Army officer who has spent a lifetime serving in the forces. After a life well lived, I have decided to embark on a new adventure alongside my daughter. Together, we have poured our hearts into curating & designing each space to perfectly suit the needs of our guests.Our commitment to excellence, attention to detail, and passion for hospitality ensure that every stay is a unique experience. We host all! Live. Laugh. Love ❤️` 
     },
     {
       name: 'Sweta Kharayat',
       role: 'Co-Host & Airbnb Marketer',
-      image: '/images/9dd37433-99c2-4be3-93f2-5d51db521ab9.jpeg',
-      description: `I am an avid reader, who spends her time trying to market and run Airbnb. I spend too much time reading and daydreaming, and I'm obsessed with books and the esoteric.\n\nThis journey is a father-daughter duo adventure, blending my marketing skills with my father's wisdom and hospitality.`
+      image: '/images/co-host.jpeg',
+      description: `I am an avid reader, who spends her time trying to market and run Airbnb. I spend too much time reading and daydreaming, and I'm obsessed with books and the esoteric.This journey is a father-daughter duo adventure, blending my marketing skills with my father's wisdom and hospitality.`
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#FF385C]">
+    <div className="min-h-screen bg-[#F7F7F7]">
       <Navigation />
       <section className="bg-[#FF385C] text-white py-20">
         <div className="container-custom section-padding">
@@ -61,7 +61,7 @@ const About = () => {
               About BOUGEE STAYS
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto whitespace-pre-line">
-              Welcome to Bougee Stays! We are a father-daughter duo passionate about creating memorable stays for our guests. Our journey began with a shared dream: to blend the wisdom and discipline of a life in the Army with the creativity and warmth of modern hospitality.\n\nEvery property is curated with love, care, and a personal touch, ensuring you feel at home—no matter where you are.
+              Welcome to Bougee Stays! We are a father-daughter duo passionate about creating memorable stays for our guests. Our journey began with a shared dream: to blend the wisdom and discipline of a life in the Army with the creativity and warmth of modern hospitality.Every property is curated with love, care, and a personal touch, ensuring you feel at home—no matter where you are.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ const About = () => {
      
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F7F7F7]">
         <div className="container-custom section-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up">
@@ -103,7 +103,7 @@ const About = () => {
 
 
       {/* Values Section */}
-      <section className="py-20 bg-[#FF385C] bg-opacity-10">
+      <section className="py-20 bg-[#F7F7F7] bg-opacity-10">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
@@ -136,7 +136,7 @@ const About = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#F7F7F7]">
         <div className="container-custom section-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up">
@@ -168,7 +168,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-[#FF385C] bg-opacity-10">
+      <section className="py-20 bg-[#F7F7F7] bg-opacity-10">
         <div className="container-custom section-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-luxury-navy mb-6">
@@ -188,7 +188,7 @@ const About = () => {
                 <img
                   src={member.image}
                   alt={`Portrait of ${member.name}, ${member.role}`}
-                  className="w-full h-64 object-cover"
+                  className="w-40 h-40 object-cover rounded-full mx-auto mt-6 border-4 border-[#FF385C] shadow-lg transition-transform duration-300 hover:scale-105"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-playfair font-semibold text-luxury-navy mb-2">

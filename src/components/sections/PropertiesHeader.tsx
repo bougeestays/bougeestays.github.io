@@ -1,4 +1,3 @@
-
 const PropertiesHeader = () => {
   return (
     <section className="airbnb-gradient text-white py-20">

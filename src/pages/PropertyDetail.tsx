@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Users, Star, Wifi, Car, Coffee, Tv, Bath, Bed } from 'lucide-react';
 import Navigation from '@/components/Navigation';
@@ -13,10 +12,10 @@ const PropertyDetail = () => {
     title: 'Elegant Downtown Penthouse',
     location: 'Manhattan, New York',
     images: [
-      'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=1200&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&h=800&fit=crop'
+      '/public/images/576ba456-db39-492a-a853-8b8b31df57b7.jpeg',
+      '/public/images/9dd37433-99c2-4be3-93f2-5d51db521ab9.jpeg',
+      '/public/images/40beb8bf-b303-44f7-9e0e-a66fb3f233e0.jpeg',
+      '/public/images/3386d013-b690-4b4c-93e3-f330e8b77db1.jpeg'
     ],
     price: '$450',
     guests: 6,
@@ -33,8 +32,7 @@ const PropertyDetail = () => {
       { icon: Tv, name: '4K Smart TV' },
       { icon: Bath, name: 'BOUGEE Bathrooms' },
       { icon: Bed, name: 'Premium Bedding' }
-    ],
-    airbnbUrl: 'https://airbnb.com/rooms/example'
+    ]
   };
 
   return (
@@ -162,11 +160,13 @@ const PropertyDetail = () => {
                 <div className="space-y-4 mb-8">
                   <Button 
                     asChild 
-                    className="w-full bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-navy font-semibold py-6 text-lg"
+                    className="w-full btn-luxury py-6 text-lg"
+                    onClick={e => {
+                      e.preventDefault();
+                      window.open('https://www.airbnb.co.in/users/show/586204498', '_blank');
+                    }}
                   >
-                    <a href={property.airbnbUrl} target="_blank" rel="noopener noreferrer">
-                      Book on Airbnb
-                    </a>
+                    <a href="#">Book on Airbnb</a>
                   </Button>
                   <Button 
                     asChild 

@@ -1,7 +1,8 @@
-
 import { Link } from 'react-router-dom';
-import { MapPin, Users, Star } from 'lucide-react';
+import { MapPin, Users, Star, Heart, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 interface PropertyCardProps {
   id: number;
@@ -15,56 +16,153 @@ interface PropertyCardProps {
 }
 
 const PropertyCard = ({ id, title, location, image, price, guests, rating, reviews }: PropertyCardProps) => {
+  const [isLiked, setIsLiked] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+    <motion.div 
+      className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -8 }}
+    >
       <div className="relative overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-        />
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+        <motion.div
+          className="relative h-64 bg-gray-200"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src={image}
+            alt={title}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={() => setImageLoaded(true)}
+          />
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse" />
+          )}
+        </motion.div>
+        
+        {/* Rating badge */}
+        <motion.div 
+          className="absolute top-4 right-4 glass-effect px-3 py-1 rounded-full"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           <div className="flex items-center space-x-1">
-            <Star className="w-4 h-4 fill-luxury-gold text-luxury-gold" />
-            <span className="text-sm font-medium text-luxury-navy">{rating}</span>
-            <span className="text-sm text-luxury-stone">({reviews})</span>
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            <span className="text-sm font-medium text-white">{rating}</span>
+            <span className="text-sm text-white/80">({reviews})</span>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Like button */}
+        <motion.button
+          className="absolute top-4 left-4 glass-effect p-2 rounded-full"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsLiked(!isLiked)}
+        >
+          <Heart 
+            className={`w-5 h-5 transition-colors ${
+              isLiked ? 'fill-red-500 text-red-500' : 'text-white'
+            }`}
+          />
+        </motion.button>
+
+        {/* Price tag */}
+        <motion.div 
+          className="absolute bottom-4 left-4 glass-effect px-3 py-2 rounded-lg"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <div className="text-white font-bold text-lg">{price}</div>
+          <div className="text-white/80 text-xs">per night</div>
+        </motion.div>
       </div>
       
       <div className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-playfair font-semibold text-luxury-navy hover:text-luxury-gold transition-colors">
+        <motion.div 
+          className="flex items-start justify-between mb-3"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <h3 className="text-xl font-playfair font-semibold text-gray-800 hover:text-[#FF385C] transition-colors">
             <Link to={`/property/${id}`}>{title}</Link>
           </h3>
-        </div>
+        </motion.div>
         
-        <div className="flex items-center text-luxury-stone mb-4">
-          <MapPin className="w-4 h-4 mr-1" />
+        <motion.div 
+          className="flex items-center text-gray-600 mb-4"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <MapPin className="w-4 h-4 mr-2 text-[#FF385C]" />
           <span className="text-sm">{location}</span>
-        </div>
+        </motion.div>
         
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center text-luxury-stone">
-            <Users className="w-4 h-4 mr-1" />
+        <motion.div 
+          className="flex items-center justify-between mb-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="flex items-center text-gray-600">
+            <Users className="w-4 h-4 mr-2 text-[#FF385C]" />
             <span className="text-sm">Up to {guests} guests</span>
           </div>
-          <div className="text-right">
-            <span className="text-2xl font-playfair font-bold text-luxury-navy">{price}</span>
-            <span className="text-luxury-stone text-sm"> / night</span>
+          <div className="flex items-center text-gray-600">
+            <Calendar className="w-4 h-4 mr-2 text-[#FF385C]" />
+            <span className="text-sm">Available</span>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="flex space-x-3">
-          <Button asChild className="flex-1 bg-luxury-navy hover:bg-luxury-navy/90 text-white">
-            <Link to={`/property/${id}`}>View Details</Link>
-          </Button>
-          <Button className="flex-1 bg-luxury-gold hover:bg-luxury-gold/90 text-luxury-navy font-medium">
-            Book on Airbnb
-          </Button>
-        </div>
+        <motion.div 
+          className="flex space-x-3"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex-1"
+          >
+            <Button asChild className="w-full btn-primary"
+              onClick={e => {
+                e.preventDefault();
+                window.open('https://www.airbnb.co.in/users/show/586204498', '_blank');
+                window.open('https://www.airbnb.co.in/users/show/515211548', '_blank');
+              }}
+            >
+              <a href="#">View Details</a>
+            </Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex-1"
+          >
+            <Button asChild className="w-full btn-luxury"
+              onClick={e => {
+                e.preventDefault();
+                window.open('https://www.airbnb.co.in/users/show/586204498', '_blank');
+              }}
+            >
+              <a href="#">Book Now</a>
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

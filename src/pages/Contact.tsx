@@ -102,7 +102,7 @@ const Contact = () => {
                     BOUGEE STAYS
                   </h3>
                   <p className="text-[#222] font-medium mb-1 text-center">
-                    To Book call/text us <span className="text-[#FF385C]">☎️ 8287993252</span>
+                    To Book call/text us <span className="text-[#FF385C]">☎️ 8287993252 | 8800209843</span>
                   </p>
                 </div>
               </div>
